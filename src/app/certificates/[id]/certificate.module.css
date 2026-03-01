@@ -1,0 +1,187 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.certificateShell {
+  position: relative;
+  border-radius: 24px;
+  padding: 3rem;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.85), rgba(246, 244, 238, 0.95)),
+    linear-gradient(135deg, #f5efe6 0%, #f1f5f9 100%);
+  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
+}
+
+.certificateShell::before,
+.certificateShell::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 18px;
+  border: 2px solid rgba(15, 23, 42, 0.08);
+  pointer-events: none;
+}
+
+.certificateShell::after {
+  inset: 0;
+  border-radius: 24px;
+  border: 6px double rgba(99, 102, 241, 0.25);
+  mix-blend-mode: multiply;
+}
+
+.certificateContent {
+  position: relative;
+  z-index: 1;
+  font-family: "Playfair Display", "Times New Roman", serif;
+  color: #0f172a;
+  text-align: center;
+}
+
+.decorTitle {
+  font-size: clamp(2rem, 2.8vw, 3rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #1e293b;
+}
+
+.recipientName {
+  font-size: clamp(2.4rem, 3.3vw, 3.6rem);
+  font-weight: 600;
+  margin: 1.5rem 0;
+  color: #111827;
+}
+
+.subtitle {
+  font-family: "Lora", "Georgia", serif;
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.courseTitle {
+  font-size: clamp(1.5rem, 2.1vw, 2.2rem);
+  font-weight: 600;
+  margin-top: 0.75rem;
+  color: #1f2937;
+}
+
+.detailsRow {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 2.5rem;
+}
+
+.detailCard {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.78);
+  font-family: "Lora", "Georgia", serif;
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #64748b;
+}
+
+.detailValue {
+  font-size: 1.05rem;
+  margin-top: 0.4rem;
+  color: #0f172a;
+}
+
+.signatureRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  align-items: end;
+  margin-top: 3.5rem;
+}
+
+.signatureLine {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.4);
+  padding-bottom: 1.5rem;
+  position: relative;
+  font-family: "Lora", "Georgia", serif;
+  color: #1e293b;
+}
+
+.signatureLine::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 0;
+  bottom: -1.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(100, 116, 139, 0.8);
+}
+
+.seal {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(99, 102, 241, 0.9));
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+}
+
+.seal span:first-child {
+  font-size: 0.68rem;
+}
+
+.seal span:last-child {
+  font-size: 1.15rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.printHint {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .certificateShell {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .signatureRow {
+    gap: 1.5rem;
+  }
+}
+
+@media print {
+  :global(body) {
+    background: white;
+  }
+
+  .pageWrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .certificateShell {
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+
+  .printHint,
+  :global(.print-hidden) {
+    display: none !important;
+  }
+}

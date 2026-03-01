@@ -1,0 +1,7 @@
+[
+  { "title": "Home", "href": "/", "order": 1 },
+  { "title": "Courses", "href": "/courses", "order": 2 },
+  { "title": "About Us", "href": "/about-us", "order": 3 },
+  { "title": "Blog", "href": "/blog", "order": 4 },
+  { "title": "Contact Us", "href": "/contact-us", "order": 5 }
+]

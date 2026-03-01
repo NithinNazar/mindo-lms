@@ -1,0 +1,509 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+enum Role {
+    ADMIN
+    INSTRUCTOR
+    STUDENT
+}
+
+model User {
+    id            String    @id @default(cuid())
+    name          String
+    email         String    @unique
+    emailVerified DateTime?
+    password      String // hashed
+    role          Role      @default(STUDENT)
+    institute     String? // optional organization/institute
+    avatarUrl     String? // Cloudinary or any URL
+    position      String? // job title or role label
+    experience    Int? // years of experience
+    languages     Json? // array of language strings
+    description   String?   @db.Text // bio/about
+    createdAt     DateTime  @default(now())
+    updatedAt     DateTime  @updatedAt
+
+    accounts              Account[]
+    sessions              Session[]
+    courses               Course[]                @relation("InstructorCourses") // courses created by this user
+    reviews               Review[] // reviews made by this user
+    enrollments           Enrollment[]
+    favorites             Favorite[]
+    certificates          Certificate[]
+    DiscussionThread      DiscussionThread[]
+    DiscussionPost        DiscussionPost[]
+    DiscussionPostUpvote  DiscussionPostUpvote[]
+    InstructorApplication InstructorApplication[]
+
+    @@index([email])
+}
+
+model Account {
+    id                 String  @id @default(cuid())
+    userId             String
+    type               String
+    provider           String
+    providerAccountId  String
+    refresh_token      String? @db.Text
+    access_token       String? @db.Text
+    expires_at         Int?
+    token_type         String?
+    scope              String?
+    id_token           String? @db.Text
+    session_state      String?
+    oauth_token_secret String?
+    oauth_token        String?
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@unique([provider, providerAccountId])
+}
+
+model Session {
+    id           String   @id @default(cuid())
+    sessionToken String   @unique
+    userId       String
+    expires      DateTime
+
+    user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+    identifier String
+    token      String   @unique
+    expires    DateTime
+
+    @@unique([identifier, token])
+}
+
+model Course {
+    id               Int     @id @default(autoincrement())
+    slug             String  @unique
+    title            String
+    description      String  @db.Text
+    shortDescription String
+    whatYouWillLearn String  @db.Text
+    language         String // from a fixed list / enum
+    level            String // BEGINNER, INTERMEDIATE, EXPERT
+    price            Decimal @db.Decimal(10, 2)
+    isFree           Boolean @default(false)
+    isCertificate    Boolean @default(false)
+
+    // NEW
+    thumbnailUrl  String? // cover image for course landing page
+    promoVideoUrl String? // optional promo/intro video URL
+
+    category      Category    @relation(fields: [categoryId], references: [id])
+    categoryId    Int
+    subcategory   SubCategory @relation(fields: [subcategoryId], references: [id])
+    subcategoryId Int
+
+    instructor   User   @relation("InstructorCourses", fields: [instructorId], references: [id])
+    instructorId String
+
+    status    String // DRAFT, PENDING, PUBLISHED, REJECTED
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    sections               Section[]
+    reviews                Review[]
+    enrollments            Enrollment[]
+    resources              Resource[]
+    favorites              Favorite[]
+    certificates           Certificate[]
+    instructorApplications InstructorApplication[]
+    quizzes                Quiz[]
+    DiscussionThread       DiscussionThread[]
+}
+
+model Category {
+    id          Int           @id @default(autoincrement())
+    name        String        @unique
+    // if using self-reference for subcategories:
+    parent      Category?     @relation("SubCategories", fields: [parentId], references: [id])
+    parentId    Int?
+    children    Category[]    @relation("SubCategories")
+    Course      Course[]
+    SubCategory SubCategory[]
+}
+
+model SubCategory {
+    id         Int      @id @default(autoincrement())
+    name       String
+    category   Category @relation(fields: [categoryId], references: [id])
+    categoryId Int
+    courses    Course[]
+}
+
+model Section {
+    id       Int      @id @default(autoincrement())
+    title    String
+    order    Int
+    course   Course   @relation(fields: [courseId], references: [id])
+    courseId Int
+    lessons  Lesson[]
+}
+
+model Lesson {
+    id         Int              @id @default(autoincrement())
+    title      String
+    type       String           @default("video")
+    videoUrl   String? // URL for video lessons
+    duration   Int? // duration in seconds
+    isPreview  Boolean          @default(false)
+    section    Section          @relation(fields: [sectionId], references: [id])
+    sectionId  Int
+    resources  Resource[]
+    progresses LessonProgress[]
+}
+
+model Resource {
+    id          Int     @id @default(autoincrement())
+    title       String
+    description String?
+    fileUrl     String
+    fileName    String
+    fileType    String?
+    fileSize    Int?
+
+    course   Course @relation(fields: [courseId], references: [id])
+    courseId Int
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    Lesson    Lesson?  @relation(fields: [lessonId], references: [id])
+    lessonId  Int?
+}
+
+model Review {
+    id        Int      @id @default(autoincrement())
+    rating    Int
+    comment   String?  @db.Text
+    course    Course   @relation(fields: [courseId], references: [id])
+    courseId  Int
+    student   User     @relation(fields: [studentId], references: [id])
+    studentId String
+    createdAt DateTime @default(now())
+}
+
+model Feedback {
+    id           Int      @id @default(autoincrement())
+    name         String
+    role         String
+    message      String   @db.Text
+    rating       Int      @default(5)
+    imageUrl     String?
+    isPublished  Boolean  @default(true)
+    displayOrder Int?
+    createdAt    DateTime @default(now())
+    updatedAt    DateTime @updatedAt
+}
+
+model Announcement {
+    id          Int      @id @default(autoincrement())
+    label       String
+    highlight   String?
+    linkUrl     String?
+    isPublished Boolean  @default(true)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+}
+
+model Enrollment {
+    id         Int      @id @default(autoincrement())
+    course     Course   @relation(fields: [courseId], references: [id])
+    courseId   Int
+    student    User     @relation(fields: [studentId], references: [id])
+    studentId  String
+    enrolledAt DateTime @default(now())
+
+    // New fields
+    progress         Int              @default(0) // 0 - 100
+    completionStatus CompletionStatus @default(NOT_STARTED)
+    lastActivityAt   DateTime? // updated on lesson view, quiz, etc.
+    completedAt      DateTime? // set when completionStatus becomes COMPLETED
+    Certificate      Certificate?
+
+    lessonProgress LessonProgress[]
+    quizAttempts   QuizAttempt[]
+
+    @@unique([courseId, studentId]) // prevent duplicate enrollments
+}
+
+enum CompletionStatus {
+    NOT_STARTED
+    IN_PROGRESS
+    COMPLETED
+}
+
+enum WatchStatus {
+    NOT_STARTED
+    IN_PROGRESS
+    COMPLETED
+}
+
+enum CertificateStatus {
+    ISSUED
+    REVOKED
+}
+
+enum QuizStatus {
+    DRAFT
+    PUBLISHED
+    ARCHIVED
+}
+
+enum QuestionType {
+    SINGLE_CHOICE
+    MULTIPLE_CHOICE
+    TRUE_FALSE
+    SHORT_TEXT
+    LONG_TEXT
+    NUMERIC
+}
+
+enum AttemptStatus {
+    IN_PROGRESS
+    SUBMITTED
+    GRADED
+}
+
+enum GradingMode {
+    AUTO
+    MANUAL
+    MIXED
+}
+
+model Favorite {
+    id        Int      @id @default(autoincrement())
+    userId    String
+    courseId  Int
+    createdAt DateTime @default(now())
+
+    user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+    course Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+    @@unique([userId, courseId])
+}
+
+model Certificate {
+    id               Int               @id @default(autoincrement())
+    userId           String
+    courseId         Int
+    enrollmentId     Int               @unique
+    issuedAt         DateTime          @default(now())
+    certificateNo    String            @unique // human‑readable serial like ACAD-2025-000123
+    verificationCode String            @unique // random code for public verification
+    grade            String? // e.g., A, B, Pass
+    hours            Int? // total learning hours
+    pdfUrl           String? // generated certificate PDF/image URL
+    status           CertificateStatus @default(ISSUED)
+
+    user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+    course     Course     @relation(fields: [courseId], references: [id], onDelete: Cascade)
+    enrollment Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+
+    @@unique([userId, courseId]) // 1 certificate per user per course
+    @@index([userId, courseId])
+}
+
+model LessonProgress {
+    id              Int         @id @default(autoincrement())
+    enrollmentId    Int
+    lessonId        Int
+    status          WatchStatus @default(NOT_STARTED)
+    lastPositionSec Int         @default(0) // resume position within the video (seconds)
+    watchedSeconds  Int         @default(0) // accumulated watch time (seconds)
+    completedAt     DateTime?
+    firstWatchedAt  DateTime?
+    lastWatchedAt   DateTime?
+    watchCount      Int         @default(0)
+
+    enrollment Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+    lesson     Lesson     @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+    @@unique([enrollmentId, lessonId])
+    @@index([lessonId])
+}
+
+model Quiz {
+    id               Int         @id @default(autoincrement())
+    courseId         Int
+    title            String
+    description      String?     @db.Text
+    timeLimitSec     Int? // null = no time limit
+    maxAttempts      Int         @default(0) // 0 = unlimited
+    passingScore     Int? // percentage 0-100 for pass/fail logic
+    totalPoints      Int         @default(0) // sum of question points snapshot
+    shuffleQuestions Boolean     @default(false)
+    shuffleOptions   Boolean     @default(false)
+    gradingMode      GradingMode @default(AUTO)
+    status           QuizStatus  @default(DRAFT)
+    availableFrom    DateTime?
+    availableTo      DateTime?
+    createdAt        DateTime    @default(now())
+    updatedAt        DateTime    @updatedAt
+
+    course    Course         @relation(fields: [courseId], references: [id], onDelete: Cascade)
+    questions QuizQuestion[]
+    attempts  QuizAttempt[]
+
+    @@index([courseId, status])
+}
+
+model QuizQuestion {
+    id          Int          @id @default(autoincrement())
+    quizId      Int
+    order       Int
+    type        QuestionType
+    text        String       @db.Text
+    points      Int          @default(1)
+    explanation String?      @db.Text
+
+    quiz       Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+    options    QuizOption[]
+    QuizAnswer QuizAnswer[]
+
+    @@index([quizId])
+}
+
+model QuizOption {
+    id         Int     @id @default(autoincrement())
+    questionId Int
+    order      Int
+    text       String  @db.Text
+    isCorrect  Boolean @default(false)
+
+    question QuizQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+    @@index([questionId])
+}
+
+model QuizAttempt {
+    id           Int           @id @default(autoincrement())
+    quizId       Int
+    enrollmentId Int
+    startedAt    DateTime      @default(now())
+    submittedAt  DateTime?
+    durationSec  Int?
+    status       AttemptStatus @default(IN_PROGRESS)
+    score        Int? // points earned
+    totalPoints  Int? // snapshot of quiz total when attempted
+    percentage   Int? // 0-100
+    gradedAt     DateTime?
+    graderId     String? // manual grading user id if applicable
+
+    quiz       Quiz         @relation(fields: [quizId], references: [id], onDelete: Cascade)
+    enrollment Enrollment   @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+    answers    QuizAnswer[]
+
+    @@index([quizId])
+    @@index([enrollmentId])
+}
+
+model QuizAnswer {
+    id                Int       @id @default(autoincrement())
+    attemptId         Int
+    questionId        Int
+    selectedOptionIds Json? // for SINGLE/MULTIPLE/TRUE_FALSE; array of option ids
+    answerText        String? // for SHORT_TEXT/LONG_TEXT
+    numericAnswer     Decimal?  @db.Decimal(10, 2) // for NUMERIC
+    isCorrect         Boolean? // set by auto grading when applicable
+    earnedPoints      Int?
+    answeredAt        DateTime?
+
+    attempt  QuizAttempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+    question QuizQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+    @@unique([attemptId, questionId])
+    @@index([questionId])
+}
+
+// --- Course Community ---
+
+model DiscussionThread {
+    id             Int      @id @default(autoincrement())
+    courseId       Int
+    authorId       String
+    title          String
+    createdAt      DateTime @default(now())
+    updatedAt      DateTime @updatedAt
+    lastActivityAt DateTime @default(now())
+    acceptedPostId Int?
+
+    course       Course           @relation(fields: [courseId], references: [id], onDelete: Cascade)
+    author       User             @relation(fields: [authorId], references: [id], onDelete: Cascade)
+    posts        DiscussionPost[]
+    acceptedPost DiscussionPost?  @relation("AcceptedPost", fields: [acceptedPostId], references: [id])
+
+    @@index([courseId, lastActivityAt])
+}
+
+// --- Instructor Applications ---
+
+enum InstructorApplicationStatus {
+    PENDING
+    APPROVED
+    REJECTED
+}
+
+model InstructorApplication {
+    id        Int                         @id @default(autoincrement())
+    userId    String
+    name      String
+    email     String
+    expertise String?
+    topic     String?
+    summary   String?                     @db.Text
+    status    InstructorApplicationStatus @default(PENDING)
+    createdAt DateTime                    @default(now())
+    decidedAt DateTime?
+    decidedBy String?
+
+    user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+    Course   Course? @relation(fields: [courseId], references: [id])
+    courseId Int?
+
+    @@index([userId])
+}
+
+model DiscussionPost {
+    id        Int      @id @default(autoincrement())
+    threadId  Int
+    authorId  String
+    content   String   @db.Text
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    thread            DiscussionThread       @relation(fields: [threadId], references: [id], onDelete: Cascade)
+    author            User                   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+    upvotes           DiscussionPostUpvote[]
+    acceptedInThreads DiscussionThread[]     @relation("AcceptedPost")
+
+    @@index([threadId, createdAt])
+}
+
+model DiscussionPostUpvote {
+    id        Int      @id @default(autoincrement())
+    postId    Int
+    userId    String
+    createdAt DateTime @default(now())
+
+    post DiscussionPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+    user User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+    @@unique([postId, userId])
+    @@index([userId])
+}

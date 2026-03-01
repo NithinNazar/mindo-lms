@@ -1,0 +1,1244 @@
+[
+	{
+		"category": "Development",
+		"subcategories": [
+			{
+				"name": "Web Development",
+				"courses": [
+					{
+						"title": "The Complete 2025 Web Development",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Modern React, Next.js & TypeScript",
+						"price": "$109",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Advanced Node.js & Express APIs",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Responsive HTML & CSS Mastery",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Data Science",
+				"courses": [
+					{
+						"title": "Python for Data Science & ML",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Hands-on Artificial Neural Networks",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "The Data Science Complete Courses 2025",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Practical Pandas & NumPy",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Mobile Development",
+				"courses": [
+					{
+						"title": "Flutter & Dart — Zero to Hero",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Kotlin Android Development",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Swift & iOS App Foundations",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "React Native Essentials",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Programming",
+				"courses": [
+					{
+						"title": "Java Programming Masterclass",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "C++ Fundamentals to Advanced",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Python 3: From Basics to OOP",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Go Language Crash Course",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Game Development",
+				"courses": [
+					{
+						"title": "Unity 3D Game Development",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Unreal Engine 5: Blueprints",
+						"price": "$109",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "2D Game Dev with Godot",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Game Physics & AI Essentials",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Business",
+		"subcategories": [
+			{
+				"name": "Entrepreneurship",
+				"courses": [
+					{
+						"title": "Start & Scale Your Startup",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Business Plan Development",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Fundraising & Pitch Decks",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Lean Startup for Founders",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Communication",
+				"courses": [
+					{
+						"title": "Public Speaking Mastery",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Business Communication Skills",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Storytelling for Leaders",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Management",
+				"courses": [
+					{
+						"title": "People Management & HR Basics",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Agile Project Management",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Operations & Process Design",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "OKRs & Performance Reviews",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Sales",
+				"courses": [
+					{
+						"title": "Sales Funnel & CRM Tactics",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "B2B Sales Negotiation",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Cold Emailing that Converts",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Business Strategy",
+				"courses": [
+					{
+						"title": "Corporate Strategy Essentials",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Blue Ocean Strategy in Practice",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Competitive Analysis & Moats",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Finance & Accounting",
+		"subcategories": [
+			{
+				"name": "Bookkeeping",
+				"courses": [
+					{
+						"title": "QuickBooks Online — From Scratch",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Bookkeeping Fundamentals",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Payroll & Invoicing Basics",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Compliance",
+				"courses": [
+					{
+						"title": "GDPR & Data Privacy Essentials",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "SOX & Internal Controls",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Anti-Money Laundering (AML)",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Cryptocurrency",
+				"courses": [
+					{
+						"title": "Crypto Investing for Beginners",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Blockchain Fundamentals",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "DeFi & Web3 Overview",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Economics",
+				"courses": [
+					{
+						"title": "Micro & Macro Economics Crash",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Behavioral Economics 101",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Econometrics with R",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Finance",
+				"courses": [
+					{
+						"title": "Financial Analysis & Valuation",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Excel for Finance Professionals",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Investing & Portfolio Basics",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "IT & Software",
+		"subcategories": [
+			{
+				"name": "IT Certifications",
+				"courses": [
+					{
+						"title": "CompTIA A+ Complete Prep",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "AWS Certified Solutions Architect",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Cisco CCNA 200-301",
+						"price": "$109",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Network & Security",
+				"courses": [
+					{
+						"title": "Network Fundamentals",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Ethical Hacking & Pentesting",
+						"price": "$129",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Zero Trust & SASE Basics",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Hardware",
+				"courses": [
+					{
+						"title": "PC Building & Troubleshooting",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Raspberry Pi Projects",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Arduino for Beginners",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Operating Systems",
+				"courses": [
+					{
+						"title": "Linux Administration Basics",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Windows Server Administration",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "macOS for Power Users",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Other IT & Software",
+				"courses": [
+					{
+						"title": "Shell Scripting Essentials",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Docker & Kubernetes Intro",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "DevOps CI/CD Foundations",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Office Productivity",
+		"subcategories": [
+			{
+				"name": "Microsoft",
+				"courses": [
+					{
+						"title": "Excel from Beginner to Pro",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "PowerPoint Design Mastery",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Microsoft Teams for Work",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Apple",
+				"courses": [
+					{
+						"title": "Productivity on macOS",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Numbers, Pages, Keynote Basics",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Shortcuts Automation",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Google",
+				"courses": [
+					{
+						"title": "Google Sheets — Tips & Tricks",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Gmail & Calendar Power User",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Docs & Slides Fundamentals",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "SAP",
+				"courses": [
+					{
+						"title": "SAP FICO Essentials",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "SAP HANA for Beginners",
+						"price": "$109",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "SAP S/4HANA Logistics",
+						"price": "$129",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Oracle",
+				"courses": [
+					{
+						"title": "Oracle SQL & PL/SQL",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Oracle Database Administration",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Oracle Cloud Infrastructure Intro",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Personal Development",
+		"subcategories": [
+			{
+				"name": "Personal Transformation",
+				"courses": [
+					{
+						"title": "Habits & Mindset Mastery",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Mindfulness & Meditation Basics",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Build Confidence & Resilience",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Personal Productivity",
+				"courses": [
+					{
+						"title": "Time Management Systems",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Notion & Obsidian for Focus",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Deep Work: Beat Distractions",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Leadership",
+				"courses": [
+					{
+						"title": "Leadership for New Managers",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Coaching & Mentoring Teams",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Decision-Making Frameworks",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Career Development",
+				"courses": [
+					{
+						"title": "Career Planning & Portfolios",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Interview Skills & CV Writing",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Networking for Opportunities",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Parenting",
+				"courses": [
+					{
+						"title": "Positive Parenting Techniques",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Communication with Teens",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Early Childhood Development",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Design",
+		"subcategories": [
+			{
+				"name": "Web Design",
+				"courses": [
+					{
+						"title": "UI Design for the Web",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Design Systems with Figma",
+						"price": "$99",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Accessibility & UX Basics",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Graphic Design",
+				"courses": [
+					{
+						"title": "Photoshop for Beginners",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Illustrator Logo Design",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Typography & Layout",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Design Tools",
+				"courses": [
+					{
+						"title": "Figma from Zero to Pro",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Adobe XD Rapid Prototyping",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Canva for Quick Designs",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Game Design",
+				"courses": [
+					{
+						"title": "Game UI/UX Principles",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Level Design Fundamentals",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "2D Art for Games",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Design Thinking",
+				"courses": [
+					{
+						"title": "Design Thinking Bootcamp",
+						"price": "$119",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "User Research & Prototyping",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Workshop Facilitation",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Marketing",
+		"subcategories": [
+			{
+				"name": "Digital Marketing",
+				"courses": [
+					{
+						"title": "Social Media Marketing 2025",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Google Ads & Analytics",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Email Marketing Playbook",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "SEO",
+				"courses": [
+					{
+						"title": "Technical SEO Deep Dive",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Content SEO & Keyword Research",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Local SEO for Small Business",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Public Relations",
+				"courses": [
+					{
+						"title": "PR Strategy & Media Relations",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Crisis Communication",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Personal Branding for Executives",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Branding",
+				"courses": [
+					{
+						"title": "Brand Identity & Strategy",
+						"price": "$89",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Positioning & Messaging",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Visual Branding Systems",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Marketing Fundamentals",
+				"courses": [
+					{
+						"title": "4Ps & Market Research",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Consumer Behavior 101",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Go-To-Market (GTM) Plans",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Lifestyle",
+		"subcategories": [
+			{
+				"name": "Travel",
+				"courses": [
+					{
+						"title": "Budget Travel Hacks",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Digital Nomad Essentials",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Travel Photography Basics",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Arts & Crafts",
+				"courses": [
+					{
+						"title": "Watercolor for Beginners",
+						"price": "Free",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "DIY Home Decor Projects",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Hand Lettering Basics",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			},
+			{
+				"name": "Beauty & Makeup",
+				"courses": [
+					{
+						"title": "Everyday Makeup Looks",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Skincare Routines Explained",
+						"price": "$19",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Makeup for Photography",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Esoteric Practices",
+				"courses": [
+					{
+						"title": "Introduction to Tarot",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Astrology for Beginners",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Breathwork & Energy Basics",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					}
+				]
+			},
+			{
+				"name": "Food & Beverage",
+				"courses": [
+					{
+						"title": "Home Barista Essentials",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Baking Bread at Home",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Healthy Meal Prep",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			}
+		]
+	},
+	{
+		"category": "Photography & Video",
+		"subcategories": [
+			{
+				"name": "Digital Photography",
+				"courses": [
+					{
+						"title": "Photography Fundamentals",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "DSLR & Mirrorless Mastery",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Lightroom Editing Workflow",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Photography",
+				"courses": [
+					{
+						"title": "Composition & Framing",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Color & Black‑and‑White",
+						"price": "$29",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Night & Astro Photography",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Portrait Photography",
+				"courses": [
+					{
+						"title": "Studio Portraits: Lighting",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					},
+					{
+						"title": "Natural Light Portraits",
+						"price": "$49",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					},
+					{
+						"title": "Posing & Direction",
+						"price": "$39",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					}
+				]
+			},
+			{
+				"name": "Photography Tools",
+				"courses": [
+					{
+						"title": "Photoshop for Photographers",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Capture One Pro Basics",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Color Grading Fundamentals",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses3.jpg"
+					}
+				]
+			},
+			{
+				"name": "Commercial Photography",
+				"courses": [
+					{
+						"title": "Product Photography at Home",
+						"price": "$59",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses4.jpg"
+					},
+					{
+						"title": "Food Styling & Shooting",
+						"price": "$69",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses2.jpg"
+					},
+					{
+						"title": "Brand & Lifestyle Shoots",
+						"price": "$79",
+						"link": "/course-details",
+						"thumbnail": "/images/courses/courses1.jpg"
+					}
+				]
+			}
+		]
+	}
+]
